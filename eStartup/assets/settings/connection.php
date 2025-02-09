@@ -2,7 +2,7 @@
 
 // Database connection parameters
 $host = 'localhost';
-$dbname = 'roleevaluation';
+$dbname = 'RoleEvaluation';
 $username = 'root';
 $password = 'NYCKS241074';
 
