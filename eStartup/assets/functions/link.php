@@ -22,3 +22,4 @@ function generateDeclineLink($email)
 # another commit message
 # another commit message
 # another commit message
+# another commit message
