@@ -17,9 +17,3 @@ function generateDeclineLink($email)
     $token = base64_encode(json_encode(["Email" => $email]));
     return "http://13.60.229.207/Job-Role-Relevance/eStartup/assets/admin/approval.php?action=decline&token=$token";
 }
-
-# a commit message
-# another commit message
-# another commit message
-# another commit message
-# another commit message

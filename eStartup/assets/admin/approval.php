@@ -4,7 +4,7 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-include "../settings/connection.php";
+// include "../settings/connection.php";
 
 // Validate token and action
 if (isset($_GET['action']) && isset($_GET['token'])) {
