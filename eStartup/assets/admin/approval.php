@@ -9,22 +9,20 @@ include "../settings/connection.php";
 // Validate token and action
 if (isset($_GET['action']) && isset($_GET['token'])) {
 
-    echo "You got here";
+    $action = $_GET['action'];
+    $token = $_GET['token'];
 
-    // $action = $_GET['action'];
-    // $token = $_GET['token'];
+    // Decode the token
+    $data = json_decode(base64_decode($token), true);
 
-    // // Decode the token
-    // $data = json_decode(base64_decode($token), true);
+    if (!$data || !isset($data['Email'])) {
 
-    // if (!$data || !isset($data['Email'])) {
+        $error = "Invalid or expired token.";
+    } else {
 
-    //     $error = "Invalid or expired token.";
-    // } else {
-
-    //     $email = htmlspecialchars($data['Email']);
-    //     $hashedPassword = isset($data['Password']) ? htmlspecialchars($data['Password']) : '';
-    // }
+        $email = htmlspecialchars($data['Email']);
+        $hashedPassword = isset($data['Password']) ? htmlspecialchars($data['Password']) : '';
+    }
 } else {
 
     $error = "Invalid request.";
