@@ -1,7 +1,7 @@
 <?php
 
 // Database connection parameters
-$host = 'localhost';
+$host = 'http://13.60.229.207/';
 $dbname = 'RoleEvaluation';
 $username = 'root';
 $password = 'NYCKS241074';
