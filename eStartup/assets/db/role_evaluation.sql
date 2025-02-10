@@ -75,3 +75,5 @@ CREATE TABLE Downloads (
     DownloadDate DATETIME DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (OrganizationID) REFERENCES Organizations(OrganizationID)
 );
+
+ALTER TABLE Organizations MODIFY Name VARCHAR(255) DEFAULT 'Test Organization';
