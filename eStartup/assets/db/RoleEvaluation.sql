@@ -11,7 +11,7 @@ CREATE TABLE Organizations (
     Name VARCHAR(255) NOT NULL,
     Email VARCHAR(255) UNIQUE NOT NULL,
     Password VARCHAR(255) NOT NULL,
-    RegistrationDate DATETIME DEFAULT CURRENT_TIMESTAMP,
+    RegistrationDate DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
 -- Table to store user information (for organizational users)
