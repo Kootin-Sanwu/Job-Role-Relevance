@@ -37,8 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['Email'], $_POST['Passw
 
                 if (sendApprovalEmail($email)) {
 
-                    // header("Location: ../../index.php?msg=User approved and registered successfully. Notification sent.");  // Send email notification
-                    header("Location: ../admin/approval.php?msg=User approved and registered successfully. Notification sent.");  // Send email notification
+                    header("Location: ../../index.php?msg=User approved and registered successfully. Notification sent.");  // Send email notification
   
                 } else {
 
@@ -47,7 +46,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['Email'], $_POST['Passw
                 exit();
             } else {
 
-                header("Location: ../../index.php?msg=Failed to register the user.");
+                // header("Location: ../../index.php?msg=Failed to register the user.");
+                header("Location: ../admin/approval.php?msg=User approved and registered successfully. Notification sent.");  // Send email notification
                 exit();
             }
         } catch (PDOException $e) {

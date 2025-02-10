@@ -69,6 +69,9 @@ if (isset($_GET['action']) && isset($_GET['token'])) {
 
         <?php endif; ?>
     </div>
+    
+    <script src="../js/alerts.js" defer></script>
+
 </body>
 
 </html>
