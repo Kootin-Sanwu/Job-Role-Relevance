@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const message3 = urlParams.get('msg3');
 
         const validMessages = {
-            // Define valid messages and their corresponding SweetAlert configurations
+            // Predefined messages with SweetAlert configurations
             "Password updated successfully.": { title: "Success", icon: "success" },
             "OTP verified successfully.": { title: "Success", icon: "success" },
             "Incorrect OTP. Please try again.": { title: "Error", icon: "error" },
@@ -25,19 +25,31 @@ document.addEventListener('DOMContentLoaded', function () {
             "Failed to register the user.": { title: "Error", icon: "error" },
             "Your registration request has been sent for approval.": { title: "Success", icon: "success" },
             "OTP has been resent.": { title: "Success", icon: "success" },
-            "Error updating password.": { title: "Success", icon: "success" },
+            "Error updating password.": { title: "Error", icon: "error" },
             "Restart the login process.": { title: "Warning", icon: "warning" }
         };
 
+        // Function to check if the message is a database error
+        const isDatabaseError = (message) => message && message.startsWith("Database error:");
+
         // Function to show alert
         const showAlert = (message) => {
-            if (message && validMessages[message]) {
-                Swal.fire({
-                    title: validMessages[message].title,
-                    text: validMessages[message].text || message,
-                    icon: validMessages[message].icon,
-                    confirmButtonText: "OK"
-                });
+            if (message) {
+                if (validMessages[message]) {
+                    Swal.fire({
+                        title: validMessages[message].title,
+                        text: validMessages[message].text || message,
+                        icon: validMessages[message].icon,
+                        confirmButtonText: "OK"
+                    });
+                } else if (isDatabaseError(message)) {
+                    Swal.fire({
+                        title: "Database Error",
+                        text: message, // Display full error message
+                        icon: "error",
+                        confirmButtonText: "OK"
+                    });
+                }
             }
         };
 

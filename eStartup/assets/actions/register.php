@@ -51,7 +51,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['Email'], $_POST['Passw
             }
         } catch (PDOException $e) {
 
-            header("Location: ../views/admin.php?msg=Database error: " . $e->getMessage());
+            header("Location: ../admin/approval.php?msg=" . urlencode("Database error: " . $e->getMessage()));
             exit();
         }
     } else if ($_POST['Action'] === 'decline') {
