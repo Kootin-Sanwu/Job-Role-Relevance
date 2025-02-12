@@ -975,17 +975,10 @@ section,
   height: 100%;
 }
 
-/* .about .about-images img {
+.about .about-images img {
   border-radius: 10px;
   height: 100%;
-} */
-
-.about-images img {
-  border-radius: 10px;
-  max-width: 100%;
-  height: 200px;
 }
-
 
 /*--------------------------------------------------------------
 # Services Section
