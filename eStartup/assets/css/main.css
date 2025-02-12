@@ -980,6 +980,18 @@ section,
   height: 100%;
 }
 
+@media (max-width: 768px) {
+  .about-images .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-images img {
+    width: 100%;
+    height: auto;
+  }
+}
+
 /*--------------------------------------------------------------
 # Services Section
 --------------------------------------------------------------*/

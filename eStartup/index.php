@@ -149,7 +149,7 @@
             <a href="#" class="read-more"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
           </div>
 
-          <!-- <div class="col-lg-6 about-images" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-lg-6 about-images" data-aos="fade-up" data-aos-delay="200">
             <div class="row gy-4">
               <div class="col-lg-6">
                 <img src="assets/img/about-company-1.jpg" class="img-fluid" alt="">
@@ -162,20 +162,6 @@
                   <div class="col-lg-12">
                     <img src="assets/img/about-company-3.jpg" class="img-fluid" alt="">
                   </div>
-                </div>
-              </div>
-            </div> -->
-
-            <div class="col-md-6 col-sm-12">
-              <img src="assets/img/about-company-1.jpg" class="img-fluid" alt="">
-            </div>
-            <div class="col-md-6 col-sm-12">
-              <div class="row gy-4">
-                <div class="col-12">
-                  <img src="assets/img/about-company-2.jpg" class="img-fluid" alt="">
-                </div>
-                <div class="col-12">
-                  <img src="assets/img/about-company-3.jpg" class="img-fluid" alt="">
                 </div>
               </div>
             </div>
